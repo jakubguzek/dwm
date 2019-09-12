@@ -1,5 +1,8 @@
+diff --git a/dwm b/dwm
+index c00c0d9..2378faa 100755
+Binary files a/dwm and b/dwm differ
 diff --git a/dwm.c b/dwm.c
-index 4465af1..eff2da6 100644
+index 106610c..39e1242 100644
 --- a/dwm.c
 +++ b/dwm.c
 @@ -714,10 +714,10 @@ dirtomon(int dir)
@@ -24,10 +27,10 @@ index 4465af1..eff2da6 100644
  		occ |= c->tags;
  		if (c->isurgent)
  			urg |= c->tags;
-@@ -748,16 +748,39 @@ drawbar(Monitor *m)
-	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
+@@ -748,16 +750,39 @@ drawbar(Monitor *m)
+ 	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
 
-	if ((w = m->ww - sw - x) > bh) {
+ 	if ((w = m->ww - sw - x) > bh) {
 -		if (m->sel) {
 -			int mid = (m->ww - TEXTW(m->sel->name)) / 2 - x;
 -			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
